@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/popular-move-app/static/css/main.5f361e03.chunk.css",
-    "main.js": "/popular-move-app/static/js/main.cf7a4c6c.chunk.js",
-    "main.js.map": "/popular-move-app/static/js/main.cf7a4c6c.chunk.js.map",
+    "main.js": "/popular-move-app/static/js/main.b1148ae3.chunk.js",
+    "main.js.map": "/popular-move-app/static/js/main.b1148ae3.chunk.js.map",
     "runtime-main.js": "/popular-move-app/static/js/runtime-main.fe12fdd7.js",
     "runtime-main.js.map": "/popular-move-app/static/js/runtime-main.fe12fdd7.js.map",
-    "static/js/2.0f7eca22.chunk.js": "/popular-move-app/static/js/2.0f7eca22.chunk.js",
-    "static/js/2.0f7eca22.chunk.js.map": "/popular-move-app/static/js/2.0f7eca22.chunk.js.map",
+    "static/js/2.6289796f.chunk.js": "/popular-move-app/static/js/2.6289796f.chunk.js",
+    "static/js/2.6289796f.chunk.js.map": "/popular-move-app/static/js/2.6289796f.chunk.js.map",
     "index.html": "/popular-move-app/index.html",
-    "precache-manifest.17ebebbec9a0991438a9a30d69832f0d.js": "/popular-move-app/precache-manifest.17ebebbec9a0991438a9a30d69832f0d.js",
+    "precache-manifest.4e43e87dcc7842d4729b9eaf54eca64f.js": "/popular-move-app/precache-manifest.4e43e87dcc7842d4729b9eaf54eca64f.js",
     "service-worker.js": "/popular-move-app/service-worker.js",
     "static/css/main.5f361e03.chunk.css.map": "/popular-move-app/static/css/main.5f361e03.chunk.css.map",
-    "static/js/2.0f7eca22.chunk.js.LICENSE.txt": "/popular-move-app/static/js/2.0f7eca22.chunk.js.LICENSE.txt",
+    "static/js/2.6289796f.chunk.js.LICENSE.txt": "/popular-move-app/static/js/2.6289796f.chunk.js.LICENSE.txt",
     "static/media/logo.svg": "/popular-move-app/static/media/logo.5d5d9eef.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.fe12fdd7.js",
-    "static/js/2.0f7eca22.chunk.js",
+    "static/js/2.6289796f.chunk.js",
     "static/css/main.5f361e03.chunk.css",
-    "static/js/main.cf7a4c6c.chunk.js"
+    "static/js/main.b1148ae3.chunk.js"
   ]
 }
