@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7e994d89-d523-40dc-a89f-eebc0c0a09fc" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../SILICON_SPECTRA/toDoList/.idea/toDoList.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../movieList-react.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test-three/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test-three/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test-three/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test-three/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test-three/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test-three/.idea/test-three.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test-three/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test-three/src/Movie.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1hvopq7OXcPgWKBLg9fcfSDe1bu" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7e994d89-d523-40dc-a89f-eebc0c0a09fc" name="Default Changelist" comment="" />
+      <created>1600901115283</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1600901115283</updated>
+      <workItem from="1600901117865" duration="160000" />
+      <workItem from="1600901282882" duration="9970000" />
+      <workItem from="1600983033381" duration="3775000" />
+      <workItem from="1600988799136" duration="1694000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1259" height="212" key="GridCell.Tab.0.bottom" timestamp="1600990076289">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1259" height="212" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1600990076289" />
+    <state width="1259" height="212" key="GridCell.Tab.0.center" timestamp="1600990076288">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1259" height="212" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1600990076288" />
+    <state width="1259" height="212" key="GridCell.Tab.0.left" timestamp="1600990076287">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1259" height="212" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1600990076287" />
+    <state width="1259" height="212" key="GridCell.Tab.0.right" timestamp="1600990076288">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1259" height="212" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1600990076288" />
+  </component>
+</project>
