@@ -4,4 +4,6 @@ export const ADD_TO_FAVORITE = "add_to_favorite";
 export const REMOVE_FROM_FAVORITE = "remove_from_favorite";
 export const ADD_TO_BLOCK = "add_to_block";
 export const REMOVE_FROM_BLOCK = "remove_from_block";
+// for url
+export const URL_IMAGE_PREFIX = "https://image.tmdb.org/t/p/w500/";
 
