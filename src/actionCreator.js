@@ -1,9 +1,23 @@
 import {LOAD_DATA_FROM_DB, ADD_TO_FAVORITE, REMOVE_FROM_FAVORITE, ADD_TO_BLOCK, REMOVE_FROM_BLOCK} from "./constants";
+import axios from 'axios';
 
-export const loadDataFromDB = (singlePageMovieList) => ({
-    type: LOAD_DATA_FROM_DB,
-    data: singlePageMovieList,
-});
+
+export const loadDataFromDB = (page) => (
+
+    const res = axios
+        .get(`https://api.themoviedb.org/3/movie/popular?api_key=b3959aa01d727c748f382bf9dbaf547f&language=en-US&page={page}`)
+        .then(res => {
+            const moviesList = res.data;
+            console.log('movie list are?',moviesList)
+            return {
+                type:LOAD_DATA_FROM_DB,
+                payload:moviesList
+            }
+        })
+        .catch(err=>{
+            console.log('error is', err);
+        })
+);
 
 export const addToFavorite = (movieItem) => ({
     type: ADD_TO_FAVORITE,
