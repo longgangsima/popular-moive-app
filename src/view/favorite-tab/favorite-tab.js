@@ -3,6 +3,7 @@ import {connect} from "react-redux";
 import {loadNextPageFromDB} from "../../redux/actions";
 import {URL_IMAGE_PREFIX} from "../../constants";
 import './favorite-tab.css';
+import { Modal } from 'react-bootstrap';
 import MovieItem from "../../components/movie-item/movie-item";
 import { makeStyles } from '@material-ui/core/styles';
 
@@ -11,9 +12,6 @@ class favMovie extends React.Component {
 
 
 
-    clickHandler = () => {
-        console.log('movieLIst',this.props.movieList)
-    }
 
     render() {
 
@@ -22,16 +20,18 @@ class favMovie extends React.Component {
                 {
                     this.props.movieList[0].map((movie) => {
                         return (
-                            <div>
-                                <img src={URL_IMAGE_PREFIX + movie.poster_path} alt="No url for this movie" title={movie.title} />
+                            <div className="child">
+                                <img className='fav_movie_img' src={URL_IMAGE_PREFIX + movie.poster_path} alt="No url for this movie" title={movie.title} />
+                                <div className='button_list'>
+                                    <button>Remove</button>
+                                    <button>Block</button>
+                                    <button>Detail</button>
+                                </div>
                             </div>
                         );
                     })
                 }
 
-                <button onClick={this.clickHandler}>try</button>
-                <img src={URL_IMAGE_PREFIX + this.props.movieList[0][0].poster_path} alt="No url for this movie" title={this.props.movieList[0][0].title} />
-                {this.props.movieList.length}
             </div>
         )
     }
