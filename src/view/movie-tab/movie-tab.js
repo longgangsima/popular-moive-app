@@ -1,6 +1,6 @@
 import React from 'react';
-import {connect} from "react-redux";
-import {loadNextPageFromDB} from "../../redux/actions";
+import {connect, useDispatch} from "react-redux";
+import {loadNextPageFromDB,addToBlock} from "../../redux/actions";
 import PropTypes from "prop-types";
 import MovieItem from "../../components/movie-item/movie-item";
 
@@ -58,6 +58,24 @@ class MovieTab extends React.Component {
             currentPageMovieList: movieList[prevPage - 1],
         });
     }
+    addToBlockButton =(id)=>{
+        this.props.addToBlock(id,this.state.currentPageMovieList);
+        //
+        // this.setState(state=>{
+        //     state.currentPageMovieList.forEach((movie,index)=>{
+        //
+        //         console.log('id is: ', id);
+        //         if(movie.id === id){
+        //             movie.isBlock = true;
+        //         }
+        //
+        //     });
+        //     this.setState({
+        //         ...this.state.currentPageMovieList
+        //     })
+        // })
+
+    }
 
     render() {
         const {currentPageMovieList, currentPage} = this.state;
@@ -73,7 +91,16 @@ class MovieTab extends React.Component {
                 </div>
                 <div className="movie-list">
                     <ul>
-                        {currentPageMovieList && currentPageMovieList.map((movieItem, index) => <MovieItem key={movieItem.id} movieItem={movieItem}/>)}
+                        {currentPageMovieList &&
+                        currentPageMovieList
+                            .filter(movie=> movie.isBlock===false)
+                            .map((movieItem, index) =>
+                            <MovieItem
+                                key={movieItem.id}
+                                movieItem={movieItem}
+                                addToBlockButton={this.addToBlockButton}
+
+                            />)}
                     </ul>
                 </div>
             </div>
@@ -83,5 +110,5 @@ class MovieTab extends React.Component {
 
 export default connect(
     state => ({movieList: state.movieListReducer}), 
-    {loadNextPageFromDB}
+    {loadNextPageFromDB,addToBlock}
 )(MovieTab);

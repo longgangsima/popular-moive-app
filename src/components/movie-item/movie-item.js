@@ -15,6 +15,10 @@ export default class MovieItem extends Component {
     isFavorite: boolean
     isBlock: boolean
     */
+    AddToBlock=()=>{
+        this.props.addToBlockButton(this.props.movieItem.id);
+
+    }
     render() {
         const {movieItem} = this.props;
         return (
@@ -23,8 +27,16 @@ export default class MovieItem extends Component {
                 <h3>{movieItem.title} {movieItem.release_data}</h3>
                 <p>{movieItem.overview}</p>
                 <div>
-                    <button>Favorite</button>
-                    <button>Block</button>
+                    <button
+
+                    >
+                        Favorite
+                    </button>
+                    <button
+                        onClick={this.AddToBlock}
+                    >
+                        Block
+                    </button>
                 </div>
             </li>
         )

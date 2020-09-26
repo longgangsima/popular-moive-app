@@ -39,10 +39,24 @@ export const removeFromFavorite = (movieId) => ({
     data: movieId,
 });
 
-export const addToBlock = (movieItem) => ({
-    type: ADD_TO_BLOCK,
-    data: movieItem, 
-});
+export const addToBlock = (id,movieArray) => {
+    movieArray.forEach((movie,index)=>{
+
+        console.log('id is: ', id);
+        if(movie.id === id){
+            movie.isBlock = true;
+        }
+
+    })
+    console.log('after add to block: ', movieArray)
+    return{
+        type: ADD_TO_BLOCK,
+        data: movieArray,
+    }
+
+}
+
+
 
 export const removeFromBlock = (movieId) => ({
     type: REMOVE_FROM_BLOCK,

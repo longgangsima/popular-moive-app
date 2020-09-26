@@ -7,7 +7,13 @@ function movieListReducer(state=[], action) {
     switch(action.type) {
         case LOAD_NEXT_PAGE_FROM_DB: 
             return [...state, action.data];
-        default: 
+        case ADD_TO_BLOCK:
+            console.log("after add to block:", action.data);
+            return [...state,
+                action.date]
+
+
+        default:
             return state;
     }
 }
