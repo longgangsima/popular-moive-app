@@ -1,34 +1,12 @@
-import React from 'react';
-import BlockIcon from '@material-ui/icons/Block';
+import React,{useState} from 'react';
 import Movie from './Movie';
+import {addToFavorite,addToBlock,removeFromBlock} from '../../actionCreator';
+import { connect } from 'react-redux'
 
-const movieList = [
-    {
-        id:1,
-        name:"a",
-        isFavorite:false,
-        isBlock:false,
-    },
-    {
-        id:2,
-        name:'b',
-        isFavorite: true,
-        isBlock: false
-    },
-    {
-        id:3,
-        name:'c',
-        isFavorite: false,
-        isBlock: true,
-    },
-    {
-        id:4,
-        name:d,
-        isFavorite: false,
-        isBlock: true
-    }
-]
-const blockMovie = props => (
+
+function BlockMovie(props){
+
+    const[movies, setMovies] = useState([]);
 
     const removeButton =()=>{
 
@@ -43,23 +21,29 @@ const blockMovie = props => (
                     Movie List of Blocked
                 </h1>
             </div>
-            <div className="block-page-content">
-                {
-                    movieList
-                        .filter(movie=>{
-                            movie.isBlock
-                        })
-                        .map(movie=>{
-                        <Movie
-                            
-                        />
+            {/*<div className="block-page-content">*/}
+            {/*    {*/}
+            {/*        movieList*/}
+            {/*            .filter(movie=>{*/}
+            {/*                movie.isBlock*/}
+            {/*            })*/}
+            {/*            .map(movie=>{*/}
+            {/*                <Movie*/}
 
-                    })
-                }
-            </div>
+            {/*                />*/}
+
+            {/*            })*/}
+            {/*    }*/}
+            {/*</div>*/}
         </div>
     )
-    
-);
 
-export default blockMovie;
+
+}
+
+const mapStateToProps=({movieListReducer,favoriteListReducer,blockListReducer})=>{
+    console.log('movieListReducer contain: ',movieListReducer);
+
+}
+
+export default connect(mapStateToProps,{addToFavorite,addToBlock,removeFromBlock})(BlockMovie);
