@@ -3,7 +3,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  background: royalblue;
+  background: #343a40;
   height: 56px;
 }
 
@@ -22,6 +22,12 @@
   color: white;
   text-decoration: none;
   font-size: 1.5rem;
+}
+
+#logo {
+  display: block;
+  height: 50px;
+  width: 50px;
 }
 
 .spacer {
@@ -46,7 +52,7 @@
 
 .toolbar_navigation-items a:hover,
 .toolbar_navigation-items a:active {
-  color: lightcoral;
+  color: darkgray;
 }
 
 @media (max-width: 500px) {
