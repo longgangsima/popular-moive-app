@@ -23,7 +23,6 @@ function movieListReducer(state=[], action) {
         case REMOVE_FROM_BLOCK:
             let removeFromBlockState = [...state];
             removeFromBlockState[action.data.page - 1][action.data.index].isBlock = false;
-            removeFromBlockState[action.data.page - 1][action.data.index].isFavorite = true;
 
             return removeFromBlockState;
         default: 
