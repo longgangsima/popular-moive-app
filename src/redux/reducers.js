@@ -1,41 +1,44 @@
 import {combineReducers} from "redux";
-import {LOAD_NEXT_PAGE_FROM_DB, ADD_TO_FAVORITE, REMOVE_FROM_FAVORITE, ADD_TO_BLOCK, REMOVE_FROM_BLOCK} from "../constants";
+import {LOAD_NEXT_PAGE_FROM_DB, ADD_TO_FAVORITE, REMOVE_FROM_FAVORITE, ADD_TO_BLOCK, REMOVE_FROM_BLOCK, ADD_CURRENT_PAGE, DEDUCT_CURRENT_PAGE} from "../constants";
 
-// three reducers
-// 1. movieListReducer for tab2
+// currentPageReducer
+function currentPageReducer(state=0, action) {
+    switch(action.type) {
+        case ADD_CURRENT_PAGE:
+            return state + 1;
+        case DEDUCT_CURRENT_PAGE:
+            return state - 1;
+        default:
+            return state;
+    }
+}
+
+// movieListReducer
 function movieListReducer(state=[], action) {
     switch(action.type) {
         case LOAD_NEXT_PAGE_FROM_DB: 
             return [...state, action.data];
-        default: 
-            return state;
-    }
-}
-
-// 2. favoriteListReducer for tab3
-function favoriteListReducer(state=[], action) {
-    switch(action.type) {
         case ADD_TO_FAVORITE: 
-            return [...state, action.data];
+            let addToFavoriteState = [...state];
+            addToFavoriteState[action.data.page - 1][action.data.index].isFavorite = true;
+            return addToFavoriteState;
         case REMOVE_FROM_FAVORITE:
-            return state.filter((movieItem, index) => movieItem.id !== action.data);
-        default: 
-            return state;
-    }
-}
-
-// 3. blockListReducer for tab4
-function blockListReducer(state=[], action) {
-    switch(action.type) {
+            let removeFromFavoriteState = [...state];
+            removeFromFavoriteState[action.data.page - 1][action.data.index].isFavorite = false;
+            return removeFromFavoriteState;
         case ADD_TO_BLOCK:
-            return [...state, action.data];
+            let addToBlockState = [...state];
+            addToBlockState[action.data.page - 1][action.data.index].isBlock = true;
+            return addToBlockState;
         case REMOVE_FROM_BLOCK:
-            return state.filter((movieItem, index) => movieItem.id !== action.data);
+            let removeFromBlockState = [...state];
+            removeFromBlockState[action.data.page - 1][action.data.index].isBlock = false;
+            return removeFromBlockState;
         default: 
             return state;
     }
 }
 
 export default combineReducers({
-    movieListReducer, favoriteListReducer, blockListReducer
+    movieListReducer, currentPageReducer,
 });

@@ -1,7 +1,15 @@
 // for action creator
 import {LOAD_NEXT_PAGE_FROM_DB, ADD_TO_FAVORITE, REMOVE_FROM_FAVORITE, ADD_TO_BLOCK, REMOVE_FROM_BLOCK,
-    URL_DISCOVER_PREFIX, API_KEY_SUGUO} from "../constants";
+    URL_DISCOVER_PREFIX, API_KEY_SUGUO, ADD_CURRENT_PAGE, DEDUCT_CURRENT_PAGE} from "../constants";
 import axios from "axios";
+
+export const addCurrentPage = () => ({
+    type: ADD_CURRENT_PAGE,
+});
+
+export const deductCurrentPage = () => ({
+    type: DEDUCT_CURRENT_PAGE,
+});
 
 const loadNextPageFromDBSynch = (singlePageMovieList) => ({
     type: LOAD_NEXT_PAGE_FROM_DB,
@@ -16,10 +24,12 @@ export const loadNextPageFromDB = (page) => {
         axios.get(url)
         .then(function (response) {
             const nextPageMovieList = response.data.results;
-            // console.log("response", nextPageMovieList);
-            for(let movieItem of nextPageMovieList) {
-                movieItem.isFavorite = false;
-                movieItem.isBlock = false;
+            // console.log("response", response.data);
+            for(let i = 0 ; i < nextPageMovieList.length; i++) {
+                nextPageMovieList[i].isFavorite = false;
+                nextPageMovieList[i].isBlock = false;
+                nextPageMovieList[i].page = page;
+                nextPageMovieList[i].index = i;
             }
             dispatch(loadNextPageFromDBSynch(nextPageMovieList));
         })
@@ -29,24 +39,22 @@ export const loadNextPageFromDB = (page) => {
     }
 }
 
-export const addToFavorite = (movieItem) => ({
+export const addToFavorite = (page, index) => ({
     type: ADD_TO_FAVORITE,
-    data: movieItem,
+    data: {page:page, index:index},
 });
 
-export const removeFromFavorite = (movieId) => ({
+export const removeFromFavorite = (page, index) => ({
     type: REMOVE_FROM_FAVORITE,
-    data: movieId,
+    data: {page:page, index:index},
 });
 
-export const addToBlock = (movieItem) => ({
+export const addToBlock = (page, index) => ({
     type: ADD_TO_BLOCK,
-    data: movieItem, 
+    data: {page:page, index:index},
 });
 
-export const removeFromBlock = (movieId) => ({
+export const removeFromBlock = (page, index) => ({
     type: REMOVE_FROM_BLOCK,
-    data: movieId,
+    data: {page:page, index:index},
 });
-
-
