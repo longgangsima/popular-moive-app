@@ -16,10 +16,12 @@ export const loadNextPageFromDB = (page) => {
         axios.get(url)
         .then(function (response) {
             const nextPageMovieList = response.data.results;
-            // console.log("response", nextPageMovieList);
-            for(let movieItem of nextPageMovieList) {
-                movieItem.isFavorite = false;
-                movieItem.isBlock = false;
+            // console.log("response", response.data);
+            for(let i = 0 ; i < nextPageMovieList.length; i++) {
+                nextPageMovieList[i].isFavorite = false;
+                nextPageMovieList[i].isBlock = false;
+                nextPageMovieList[i].page = page;
+                nextPageMovieList[i].index = i;
             }
             dispatch(loadNextPageFromDBSynch(nextPageMovieList));
         })
@@ -29,24 +31,22 @@ export const loadNextPageFromDB = (page) => {
     }
 }
 
-export const addToFavorite = (movieItem) => ({
+export const addToFavorite = (page, index) => ({
     type: ADD_TO_FAVORITE,
-    data: movieItem,
+    data: {page:page, index:index},
 });
 
-export const removeFromFavorite = (movieId) => ({
+export const removeFromFavorite = (page, index) => ({
     type: REMOVE_FROM_FAVORITE,
-    data: movieId,
+    data: {page:page, index:index},
 });
 
-export const addToBlock = (movieItem) => ({
+export const addToBlock = (page, index) => ({
     type: ADD_TO_BLOCK,
-    data: movieItem, 
+    data: {page:page, index:index},
 });
 
-export const removeFromBlock = (movieId) => ({
+export const removeFromBlock = (page, index) => ({
     type: REMOVE_FROM_BLOCK,
-    data: movieId,
+    data: {page:page, index:index},
 });
-
-

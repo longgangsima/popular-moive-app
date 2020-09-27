@@ -6,6 +6,10 @@
     background-color: lightgrey;
 }
 
+.my_modal_title {
+    margin-left: 15px;
+}
+
 #fav_image_modal {
     height: 300px;
 }
