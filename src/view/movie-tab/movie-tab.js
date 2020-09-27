@@ -3,6 +3,8 @@ import {connect} from "react-redux";
 import {loadNextPageFromDB} from "../../redux/actions";
 import PropTypes from "prop-types";
 import MovieItem from "../../components/movie-item/movie-item";
+import "./movie-tab.css";
+// import "./all.css";
 
 class MovieTab extends React.Component {
     static propTypes = {
@@ -62,13 +64,17 @@ class MovieTab extends React.Component {
     render() {
         const {currentPageMovieList, currentPage} = this.state;
         return (
-            <div>
+            <div className="page">
                 <div className="nav-bar">
                     <h1>The Top Rated Movie List</h1>
                     <div className="middle-bar">
                         <button onClick={this.handleButtonPrevClick}>Previous</button>
                         <span>{currentPage}</span>
                         <button onClick={this.handleButtonNextClick}>Next</button>
+                    </div>
+                    <div>
+                        <button onClick={this.handleButtonClick}></button>
+                        
                     </div>
                 </div>
                 <div className="movie-list">

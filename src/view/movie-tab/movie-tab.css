@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.page {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: rgb(255, 253, 246);
+    padding: 20px;
+}
+
+.nav-bar {
+    width: 80%;
+    height: 100px;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 16px;
+    background-color: rgb(217, 239, 244);
+    border-radius: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.nav-bar h1{
+    font-size: 20px;
+}
