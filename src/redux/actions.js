@@ -28,65 +28,22 @@ export const loadNextPageFromDB = (page) => {
         });
     }
 }
+export const addToFavorite = (page, index) => ({
+    type: ADD_TO_FAVORITE,
+    data: {page:page, index:index},
+});
 
-export const addToFavorite = (id,currentPage, movieArray) =>{
-    console.log('before add to block: ', movieArray)
-
-    movieArray.forEach((movie,index)=>{
-        console.log('id is: ', id);
-        if(movie.id === id){
-            movie.isBlock = false;
-            movie.isFavorite =true;
-        }
-    })
-    console.log('after add to block: ', movieArray)
-    
-    return{
-        type: ADD_TO_FAVORITE,
-        data: movieArray,
-    }
-    
-}
-
-
-
-export const removeFromFavorite = (movieId) => ({
+export const removeFromFavorite = (page, index) => ({
     type: REMOVE_FROM_FAVORITE,
-    data: movieId,
+    data: {page:page, index:index},
 });
 
-export const addToBlock = (index,currentPage, movieArray) => {
+export const addToBlock = (page, index) => ({
+    type: ADD_TO_BLOCK,
+    data: {page:page, index:index},
+});
 
-    console.log('current page: ', currentPage);
-    console.log('current index of element: ',index);
-
-    console.log('before add to block: ', movieArray)
-    console.log('before add to block: ', movieArray[currentPage][index])
-
-
-    // movieArray[currentPage][index].isBlock=true;
-
-    // movieArray.forEach((movie,index)=>{
-    //
-    //     console.log('id is: ', id);
-    //     if(movie.id === id){
-    //         movie.isBlock = true;
-    //     }
-    //
-    // })
-    console.log('after add to block: ', movieArray)
-    return{
-        type: ADD_TO_BLOCK,
-        data: movieArray,
-    }
-
-}
-
-
-
-export const removeFromBlock = (movieId) => ({
+export const removeFromBlock = (page, index) => ({
     type: REMOVE_FROM_BLOCK,
-    data: movieId,
+    data: {page:page, index:index},
 });
-
-
