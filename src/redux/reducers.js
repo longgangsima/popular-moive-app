@@ -9,10 +9,12 @@ function movieListReducer(state=[], action) {
         case ADD_TO_FAVORITE: 
             let addToFavoriteState = [...state];
             addToFavoriteState[action.data.page - 1][action.data.index].isFavorite = true;
+            addToFavoriteState[action.data.page - 1][action.data.index].isBlock = false;
             return addToFavoriteState;
         case REMOVE_FROM_FAVORITE:
             let removeFromFavoriteState = [...state];
             removeFromFavoriteState[action.data.page - 1][action.data.index].isFavorite = false;
+
             return removeFromFavoriteState;
         case ADD_TO_BLOCK:
             let addToBlockState = [...state];
@@ -21,6 +23,8 @@ function movieListReducer(state=[], action) {
         case REMOVE_FROM_BLOCK:
             let removeFromBlockState = [...state];
             removeFromBlockState[action.data.page - 1][action.data.index].isBlock = false;
+            removeFromBlockState[action.data.page - 1][action.data.index].isFavorite = true;
+
             return removeFromBlockState;
         default: 
             return state;
