@@ -1,6 +1,6 @@
-import React, {useState} from 'react';
-import {Modal, Button, Container, Row, Col} from 'react-bootstrap';
-import {URL_IMAGE_PREFIX} from "../../constants";
+import React from 'react';
+import {Modal, Container, Row, Col} from 'react-bootstrap';
+import {URL_IMAGE_PREFIX, GENRE_COLOR} from "../../constants";
 import './fav-movie-detail.css'
 import {FaStar} from 'react-icons/fa';
 import {CgMoreR} from 'react-icons/cg';
@@ -31,27 +31,6 @@ class FavMovieDetail extends React.Component {
 
 
     render() {
-        const genreColor = {
-            28: {"name": "Action", "color": "Orange"},
-            12: {"name": "Adventure", "color": "lightpink"},
-            16: {"name": "Animation", "color": "DeepBlueSky"},
-            35: {"name": "Comedy", "color": "MediumOrchid"},
-            80: {"name": "Crime", "color": "violet"},
-            99: {"name": "Documentary", "color": "sandybrown"},
-            18: {"name": "Drama", "color": "hotpink"},
-            10751: {"name": "Family", "color": "salmon"},
-            14: {"name": "Fantasy", "color": "turquoise"},
-            36: {"name": "History", "color": "khaki"},
-            27: {"name": "Horror", "color": "deeppink"},
-            10402: {"name": "Music", "color": "plum"},
-            9648: {"name": "Mystery", "color": "lavender"},
-            10749: {"name": "Romance", "color": "gold"},
-            878: {"name": "Science Fiction", "color": "skyblue"},
-            10770: {"name": "TV Movie", "color": "yellowgreen"},
-            53: {"name": "Thriller", "color": "brown"},
-            10752: {"name": "War", "color": "red"},
-            37: {"name": "Western", "color": "Goldenrod"},
-        }
 
         return (
             <div>
@@ -79,8 +58,8 @@ class FavMovieDetail extends React.Component {
                                             this.props.movieDetail.genre_ids.map((genre) => {
                                                 return (
                                                     <button key={genre} className="genre_label"
-                                                            style={{backgroundColor: genreColor[String(genre)].color}}>
-                                                        {genreColor[String(genre)].name}
+                                                            style={{backgroundColor: GENRE_COLOR[String(genre)].color}}>
+                                                        {GENRE_COLOR[String(genre)].name}
                                                     </button>
                                                 )
                                             })

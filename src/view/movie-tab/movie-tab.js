@@ -131,10 +131,6 @@ class MovieTab extends React.Component {
         });
     }
 
-    clickHandler = () => {
-        console.log(this.props.movieList)
-    }
-
     render() {
         const {addToFavorite, removeFromFavorite, addToBlock} = this.props;
         const {currentPageMovieList, currentPage, showLoadingBar} = this.state;
