@@ -179,7 +179,6 @@ class MovieTab extends React.Component {
                 
                 <div className={showLoadingBar?"hideElement":""}>
                     <div className="movie-list-wrapper">
-                        <button onClick={this.clickHandler}>click me</button>
                         <ul className="movie-list">
                             {currentPageMovieList && currentPageMovieList.map((movieItem) => 
                             <MovieItem key={movieItem.id} movieItem={movieItem} removeMovieItemFromState={this.removeMovieItemFromState}
