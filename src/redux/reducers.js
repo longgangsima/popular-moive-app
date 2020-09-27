@@ -1,5 +1,5 @@
 import {combineReducers} from "redux";
-import {LOAD_NEXT_PAGE_FROM_DB, ADD_TO_FAVORITE, REMOVE_FROM_FAVORITE, ADD_TO_BLOCK, REMOVE_FROM_BLOCK} from "../constants";
+import {LOAD_NEXT_PAGE_FROM_DB, ADD_TO_FAVORITE, REMOVE_FROM_FAVORITE, ADD_TO_BLOCK, REMOVE_FROM_BLOCK, ADD_CURRENT_PAGE, DEDUCT_CURRENT_PAGE} from "../constants";
 
 // movieListReducer
 function movieListReducer(state=[], action) {
@@ -28,6 +28,18 @@ function movieListReducer(state=[], action) {
     }
 }
 
+// currentPageReducer
+function currentPageReducer(state=0, action) {
+    switch(action.type) {
+        case ADD_CURRENT_PAGE:
+            return state + 1;
+        case DEDUCT_CURRENT_PAGE:
+            return state - 1;
+        default:
+            return state;
+    }
+}
+
 export default combineReducers({
-    movieListReducer
+    movieListReducer, currentPageReducer,
 });

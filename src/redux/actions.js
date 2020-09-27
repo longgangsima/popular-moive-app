@@ -1,7 +1,15 @@
 // for action creator
 import {LOAD_NEXT_PAGE_FROM_DB, ADD_TO_FAVORITE, REMOVE_FROM_FAVORITE, ADD_TO_BLOCK, REMOVE_FROM_BLOCK,
-    URL_DISCOVER_PREFIX, API_KEY_SUGUO} from "../constants";
+    URL_DISCOVER_PREFIX, API_KEY_SUGUO, ADD_CURRENT_PAGE, DEDUCT_CURRENT_PAGE} from "../constants";
 import axios from "axios";
+
+export const addCurrentPage = () => ({
+    type: ADD_CURRENT_PAGE,
+});
+
+export const deductCurrentPage = () => ({
+    type: DEDUCT_CURRENT_PAGE,
+});
 
 const loadNextPageFromDBSynch = (singlePageMovieList) => ({
     type: LOAD_NEXT_PAGE_FROM_DB,

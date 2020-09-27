@@ -5,9 +5,10 @@
 }
 
 body {
-    font-family: Times, Arial, Helvetica, sans-serif, fantasy;
+    font-family: Times, Arial, Helvetica, sans-serif, fantasy !important; 
     color: #333;
     background-color: #fff;
+    font-size: 14px;
 }
 
 .page {
@@ -31,6 +32,7 @@ body {
 
 .nav-bar h1{
     font-size: 20px;
+    font-weight: 700;
 }
 
 .middle-bar {
@@ -41,7 +43,7 @@ body {
 } 
 
 .middle-bar .middle-bar-title {
-    height: 26px;
+    height: 28px;
     width: 50%;
     min-width: 200px;
     background-color: #fff;
