@@ -1,0 +1,37 @@
+.my_modal .modal-content {
+    background-color: white;
+}
+
+.my_modal_body .modal-content .modal-body {
+    background-color: lightgrey;
+}
+
+#fav_image_modal {
+    height: 300px;
+}
+
+.genre_label {
+    text-decoration: none;
+    border: none;
+    padding:3px;
+    margin: 5px;
+    color:white;
+    border-radius: 2px;
+}
+
+.overview {
+    margin-top: 5px;
+    margin: 5px;
+}
+
+.rating {
+    margin-left: 7px;
+    margin-top: 5px;
+}
+
+.rating_label {
+    font-size: 7px;
+    margin-left: 7px;
+    font-weight: bold;
+}
+

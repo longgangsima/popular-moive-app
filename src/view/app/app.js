@@ -34,7 +34,7 @@ class App extends Component {
     }
     return (
         <BrowserRouter>
-            <div className='container'>
+            <div className='router_container'>
                 <Toolbar drawerClickHandler={this.drawerToggleClickHandler} />
                 <SideDrawer show={this.state.sideDrawerOpen} click={this.backdropClickHandler}/>
                 {backdrop}

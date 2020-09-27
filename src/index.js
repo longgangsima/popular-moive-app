@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './view/app/app';
 import store from "./redux/store";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import {Provider} from "react-redux";
 
 ReactDOM.render(
