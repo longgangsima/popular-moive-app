@@ -33,7 +33,7 @@ export default class MovieItem extends Component {
                         Favorite
                     </button>
                     <button
-                        onClick={this.AddToBlock}
+                        onClick={this.AddToBlock(movieItem.index)}
                     >
                         Block
                     </button>

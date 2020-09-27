@@ -40,7 +40,7 @@ function BlockMovie (props){
                 {
                     !isLoading && movies[0]
                         .filter(movie=> movie.isBlock)
-                        .map(movie=>
+                        .map((movie,index)=>
                             <div
                                 className="App-list-movie"
                                 key={movie.id}
@@ -50,7 +50,7 @@ function BlockMovie (props){
                                     key={movie.id}
                                     removeButton={removeButton}
                                     likeButton={likeButton}
-
+                                    index = {index}
                                 />
                             </div>
 

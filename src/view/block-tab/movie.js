@@ -3,7 +3,7 @@ import React,{useEffect} from 'react';
 function Movie({item,likeButton,removeButton}){
 
     useEffect(()=>{
-        console.log('in children', item)
+        console.log('in children', item.index)
         console.log('post address: ', item.poster_path);
     })
 
@@ -23,13 +23,13 @@ function Movie({item,likeButton,removeButton}){
                 <div className="movie-buttons">
                     <button
                         className="movie-button-button"
-                        onClick={()=>removeButton(item.id)}
+                        onClick={()=>removeButton(item.index)}
                     >
                         Remove
                     </button>
                     <button
                         className="movie-button-button"
-                        onClick={()=>likeButton(item.id)}
+                        onClick={()=>likeButton(item.index)}
                     >
                         Like
                     </button>

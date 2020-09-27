@@ -29,25 +29,51 @@ export const loadNextPageFromDB = (page) => {
     }
 }
 
-export const addToFavorite = (movieItem) => ({
-    type: ADD_TO_FAVORITE,
-    data: movieItem,
-});
+export const addToFavorite = (id,currentPage, movieArray) =>{
+    console.log('before add to block: ', movieArray)
+
+    movieArray.forEach((movie,index)=>{
+        console.log('id is: ', id);
+        if(movie.id === id){
+            movie.isBlock = false;
+            movie.isFavorite =true;
+        }
+    })
+    console.log('after add to block: ', movieArray)
+    
+    return{
+        type: ADD_TO_FAVORITE,
+        data: movieArray,
+    }
+    
+}
+
+
 
 export const removeFromFavorite = (movieId) => ({
     type: REMOVE_FROM_FAVORITE,
     data: movieId,
 });
 
-export const addToBlock = (id,movieArray) => {
-    movieArray.forEach((movie,index)=>{
+export const addToBlock = (index,currentPage, movieArray) => {
 
-        console.log('id is: ', id);
-        if(movie.id === id){
-            movie.isBlock = true;
-        }
+    console.log('current page: ', currentPage);
+    console.log('current index of element: ',index);
 
-    })
+    console.log('before add to block: ', movieArray)
+    console.log('before add to block: ', movieArray[currentPage][index])
+
+
+    // movieArray[currentPage][index].isBlock=true;
+
+    // movieArray.forEach((movie,index)=>{
+    //
+    //     console.log('id is: ', id);
+    //     if(movie.id === id){
+    //         movie.isBlock = true;
+    //     }
+    //
+    // })
     console.log('after add to block: ', movieArray)
     return{
         type: ADD_TO_BLOCK,

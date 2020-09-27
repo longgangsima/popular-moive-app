@@ -58,23 +58,9 @@ class MovieTab extends React.Component {
             currentPageMovieList: movieList[prevPage - 1],
         });
     }
-    addToBlockButton =(id)=>{
-        this.props.addToBlock(id,this.state.currentPageMovieList);
-        //
-        // this.setState(state=>{
-        //     state.currentPageMovieList.forEach((movie,index)=>{
-        //
-        //         console.log('id is: ', id);
-        //         if(movie.id === id){
-        //             movie.isBlock = true;
-        //         }
-        //
-        //     });
-        //     this.setState({
-        //         ...this.state.currentPageMovieList
-        //     })
-        // })
-
+    addToBlockButton =(index)=>{
+        console.log('what page is: ', this.state.currentPage);
+        // this.props.addToBlock(index,this.state.currentPage-1,this.state.currentPageMovieList);
     }
 
     render() {
@@ -99,6 +85,7 @@ class MovieTab extends React.Component {
                                 key={movieItem.id}
                                 movieItem={movieItem}
                                 addToBlockButton={this.addToBlockButton}
+                                index={index}
 
                             />)}
                     </ul>
