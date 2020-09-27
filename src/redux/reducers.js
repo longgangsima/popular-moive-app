@@ -1,5 +1,17 @@
 import {combineReducers} from "redux";
-import {LOAD_NEXT_PAGE_FROM_DB, ADD_TO_FAVORITE, REMOVE_FROM_FAVORITE, ADD_TO_BLOCK, REMOVE_FROM_BLOCK} from "../constants";
+import {LOAD_NEXT_PAGE_FROM_DB, ADD_TO_FAVORITE, REMOVE_FROM_FAVORITE, ADD_TO_BLOCK, REMOVE_FROM_BLOCK, ADD_CURRENT_PAGE, DEDUCT_CURRENT_PAGE} from "../constants";
+
+// currentPageReducer
+function currentPageReducer(state=0, action) {
+    switch(action.type) {
+        case ADD_CURRENT_PAGE:
+            return state + 1;
+        case DEDUCT_CURRENT_PAGE:
+            return state - 1;
+        default:
+            return state;
+    }
+}
 
 // movieListReducer
 function movieListReducer(state=[], action) {
@@ -23,7 +35,6 @@ function movieListReducer(state=[], action) {
         case REMOVE_FROM_BLOCK:
             let removeFromBlockState = [...state];
             removeFromBlockState[action.data.page - 1][action.data.index].isBlock = false;
-            removeFromBlockState[action.data.page - 1][action.data.index].isFavorite = true;
 
             return removeFromBlockState;
         default: 
@@ -32,5 +43,10 @@ function movieListReducer(state=[], action) {
 }
 
 export default combineReducers({
+<<<<<<< HEAD
     movieListReducer
 });
+=======
+    movieListReducer, currentPageReducer,
+});
+>>>>>>> 2d9d2299aa7488cc124ff4260fef3042163d6f24
