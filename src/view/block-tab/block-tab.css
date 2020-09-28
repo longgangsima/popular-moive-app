@@ -34,7 +34,8 @@
     margin: 0 auto;
     align-self: center;
     justify-self: center;
-    padding:20px 10px 10px 20px; /* this */
+    padding:20px 10px 10px 10px; /* this */
+    justify-content: center;
 
 }
 
