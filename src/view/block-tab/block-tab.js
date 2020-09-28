@@ -35,8 +35,7 @@ function BlockMovie(props) {
                         .map((movies,page)=>
                             <div key={page} className="block-movies">
                                 {movies
-                                    // .filter(movie=>movie.isBlock===true)
-                                    //在这，因为你filter 完以后，他的返回一个新的，所以下面的 index 是根据目前给你的
+
                                     .map((movie,index)=>
                                         <div className="block-movies-detail">
                                             {
