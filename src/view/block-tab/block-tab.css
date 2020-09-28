@@ -23,15 +23,21 @@
 
 .block-movies{
     box-sizing: content-box;
-    display: grid;
-    grid-template-columns: repeat(4, 25%);
-    grid-column-gap: 5px;
-    grid-row-gap: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /*grid-template-columns: repeat(4, 25%);*/
+    /*grid-column-gap: 5px;*/
+    /*grid-row-gap: 10px;*/
     /*grid-gap: 5px;*/
     width: 80%;
-    padding:10px;
     margin: 0 auto;
     align-self: center;
     justify-self: center;
+    padding:10px; /* this */
 
+}
+
+.block-movies > .block-movies-detail{
+    margin:5px;
 }

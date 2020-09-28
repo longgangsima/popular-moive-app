@@ -9,7 +9,12 @@ function BlockMovieItem(props) {
     const dispatch = useDispatch()
     useEffect(()=>{
         console.log('page and index are', page, ' and index ', index)
-    })
+    },[])
+
+    const removeButton=()=>{
+        console.log('remove from block: ', page, index);
+        dispatch(removeFromBlock(page+1,index))
+    }
 
     return(
         <div className="block-movie">
@@ -23,7 +28,7 @@ function BlockMovieItem(props) {
             <div className="block-movie-buttons">
                 <button
                     className="block-movie-button-button"
-                    onClick={()=>dispatch(removeFromBlock(page+1,index))}
+                    onClick={removeButton}
                 >
                     Remove
                 </button>
