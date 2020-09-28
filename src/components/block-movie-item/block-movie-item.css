@@ -4,6 +4,7 @@
 
 }
 
+
 .block-movie-image img {
     width: 100%;
     vertical-align: bottom;
@@ -16,7 +17,7 @@
 }
 .block-movie:hover .block-movie-image {
     top: -10px;
-    border-color: rgb(118, 184, 244);
+    border: #6c757d solid 2px;
 }
 
 .block-movie-buttons{
