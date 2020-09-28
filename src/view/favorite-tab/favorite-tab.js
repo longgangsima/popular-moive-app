@@ -1,37 +1,50 @@
 import React from 'react';
 import {connect} from "react-redux";
-import {loadNextPageFromDB} from "../../redux/actions";
+import {addToBlock, removeFromFavorite} from "../../redux/actions";
 import {URL_IMAGE_PREFIX} from "../../constants";
 import './favorite-tab.css';
-import MovieItem from "../../components/movie-item/movie-item";
-import { makeStyles } from '@material-ui/core/styles';
+import FavMovieDetail from './fav-movie-detail'
 
 
 class favMovie extends React.Component {
 
-
-
-    clickHandler = () => {
-        console.log('movieLIst',this.props.movieList)
-    }
-
     render() {
+
+        let favMovieList = [];
+
+        if (this.props.movieList.length === 0) {
+            favMovieList = null;
+        } else {
+            for (let i = 0; i < this.props.movieList.length; i++) {
+                favMovieList = favMovieList.concat(this.props.movieList[i].filter(movie => {
+                    return movie.isFavorite === true;
+                }))
+            }
+            if (favMovieList.length === 0) {
+                favMovieList = null;
+            }
+        }
+
 
         return (
             <div className='fav_container'>
-                {
-                    this.props.movieList[0].map((movie) => {
+                {favMovieList === null ? (<div className="no_fav">No Favorite movie!</div>) :
+                    favMovieList.map((movie) => {
                         return (
-                            <div>
-                                <img src={URL_IMAGE_PREFIX + movie.poster_path} alt="No url for this movie" title={movie.title} />
+                            <div className="child" key={movie.id}>
+                                <img className='fav_movie_img' src={URL_IMAGE_PREFIX + movie.poster_path}
+                                     alt="No url for this movie" title={movie.title}/>
+                                <div className='button_list'>
+                                    <FavMovieDetail movieDetail={movie}
+                                                    removeFromFavorite={this.props.removeFromFavorite}
+                                                    addToBlock={this.props.addToBlock}></FavMovieDetail>
+                                </div>
                             </div>
                         );
                     })
                 }
 
-                <button onClick={this.clickHandler}>try</button>
-                <img src={URL_IMAGE_PREFIX + this.props.movieList[0][0].poster_path} alt="No url for this movie" title={this.props.movieList[0][0].title} />
-                {this.props.movieList.length}
+
             </div>
         )
     }
@@ -39,6 +52,6 @@ class favMovie extends React.Component {
 
 export default connect(
     state => ({movieList: state.movieListReducer}),
-    {loadNextPageFromDB}
+    {removeFromFavorite, addToBlock}
 )(favMovie);
 

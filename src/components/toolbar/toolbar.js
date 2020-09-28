@@ -1,15 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
-
-import DrawerToggleButton from '../sidedrawer/drawer-toggle-button';
 import './toolbar.css';
 import movieDB from '../../img/movieDB.svg';
+import { CgMenu } from 'react-icons/cg'
 
 const toolbar = props => (
   <header className="toolbar">
     <nav className="toolbar__navigation">
         <div className="toolbar__toggle-button">
-            <DrawerToggleButton click={props.drawerClickHandler} />
+            <CgMenu color={"white"} onClick={props.drawerClickHandler}></CgMenu>
         </div>
         <div className="toolbar__logo"><Link to="/"><img id = 'logo' src={movieDB} alt=""/></Link></div>
         <div className="spacer" />

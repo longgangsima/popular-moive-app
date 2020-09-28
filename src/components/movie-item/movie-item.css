@@ -7,7 +7,8 @@
     border-radius: 10px;
     overflow: hidden;
     margin-bottom: 25px;
-    font-size: 14px;
+
+    font-size: 14px !important;
 }
 
 .movie-item:hover {
@@ -40,7 +41,9 @@
 }
 
 .movie-item h3 {
-    font-size: 18px;
+
+    font-size: 18px !important;
+    font-weight: 700;
     margin-bottom: 5px;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -55,6 +58,7 @@
     color: rgb(117, 117, 117);
     /* color: rgb(131, 131, 131); */
     font-weight: 400;
+    font-size: 14px !important;
 }
 
 .movie-item h4 span {
@@ -63,7 +67,8 @@
 
 .movie-item p {
     color: #bbb;
-    height: 70px;
+
+    height: 80px;
     margin-top: 5px;
     overflow: hidden;
     display: -webkit-box;

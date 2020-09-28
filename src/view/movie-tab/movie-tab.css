@@ -5,9 +5,16 @@
 }
 
 body {
+<<<<<<< HEAD
     font-family: Times, Arial, Helvetica, sans-serif, fantasy;
     color: #333;
     background-color: #fff;
+=======
+    font-family: Times, Arial, Helvetica, sans-serif, fantasy !important; 
+    color: #333;
+    background-color: #fff;
+    font-size: 14px;
+>>>>>>> develop
 }
 
 .page {
@@ -31,6 +38,10 @@ body {
 
 .nav-bar h1{
     font-size: 20px;
+<<<<<<< HEAD
+=======
+    font-weight: 700;
+>>>>>>> develop
 }
 
 .middle-bar {
@@ -41,7 +52,11 @@ body {
 } 
 
 .middle-bar .middle-bar-title {
+<<<<<<< HEAD
     height: 26px;
+=======
+    height: 28px;
+>>>>>>> develop
     width: 50%;
     min-width: 200px;
     background-color: #fff;
