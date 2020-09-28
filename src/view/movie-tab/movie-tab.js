@@ -5,11 +5,8 @@ import {loadNextPageFromDB} from "../../redux/actions";
 import {addToFavorite} from "../../redux/actions";
 import {removeFromFavorite} from "../../redux/actions";
 import {addToBlock} from "../../redux/actions";
-<<<<<<< HEAD
-=======
 import {addCurrentPage} from "../../redux/actions";
 import {deductCurrentPage} from "../../redux/actions";
->>>>>>> develop
 import MovieItem from "../../components/movie-item/movie-item";
 import "./movie-tab.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -27,35 +24,13 @@ class MovieTab extends React.Component {
         addToFavorite: PropTypes.func.isRequired,
         removeFromFavorite: PropTypes.func.isRequired,
         addToBlock: PropTypes.func.isRequired,
-<<<<<<< HEAD
-=======
         addCurrentPage: PropTypes.func.isRequired,
         deductCurrentPage: PropTypes.func.isRequired,
->>>>>>> develop
     }
 
     state = {
         totalPage: this.props.movieList.length,
         currentPageMovieList: [],
-<<<<<<< HEAD
-        showLoadingBar: true,
-    }
-
-    static getDerivedStateFromProps = (props, state) => {
-        const length = props.movieList.length;
-        if(length === state.totalPage) return null;
-        // {
-        //     return  {
-        //         currentPageMovieList: props.movieList[state.currentPage - 1] && 
-        //         props.movieList[state.currentPage - 1].filter((movieItem) => !movieItem.isBlock),
-        //     }
-        // }
-        return {
-            currentPage: state.currentPage + 1,
-            totalPage: state.totalPage + 1,
-            currentPageMovieList: props.movieList[length - 1],
-            showLoadingBar: false,
-=======
         showLoadingBar: false,
     }
 
@@ -70,7 +45,6 @@ class MovieTab extends React.Component {
                 currentPageMovieList: props.movieList[totalPageInStore - 1],
                 showLoadingBar: false,
             }
->>>>>>> develop
         }
         return null;
     }
@@ -101,10 +75,6 @@ class MovieTab extends React.Component {
         if(nextPage <= totalPage) {
             const {movieList} = this.props;
             this.setState({
-<<<<<<< HEAD
-                currentPage: nextPage,
-=======
->>>>>>> develop
                 currentPageMovieList: movieList[nextPage - 1].filter((movieItem) => !movieItem.isBlock),
             })
         }
@@ -123,10 +93,6 @@ class MovieTab extends React.Component {
         deductCurrentPage();
         const prevPage = currentPage - 1;
         this.setState({
-<<<<<<< HEAD
-            currentPage: prevPage,
-=======
->>>>>>> develop
             currentPageMovieList: movieList[prevPage - 1].filter((movieItem) => !movieItem.isBlock),
         });
     }
@@ -152,7 +118,7 @@ class MovieTab extends React.Component {
     }
 
     sortPopularity = (a, b) => (b.popularity - a.popularity);
-    
+
     handleButtonAverageScoreClick = () => {
         let arr = [...this.state.currentPageMovieList];
         arr.sort(this.sortAverageScore);
@@ -180,13 +146,8 @@ class MovieTab extends React.Component {
     }
 
     render() {
-<<<<<<< HEAD
-        const {addToFavorite, removeFromFavorite, addToBlock} = this.props;
-        const {currentPageMovieList, currentPage, showLoadingBar} = this.state;
-=======
         const {currentPage, addToFavorite, removeFromFavorite, addToBlock} = this.props;
         const {currentPageMovieList, showLoadingBar} = this.state;
->>>>>>> develop
         return (
             <div className="page">
                 <div className="nav-bar">
@@ -225,13 +186,13 @@ class MovieTab extends React.Component {
                         <img src={loadingBar} alt="wrong url" />
                     </div>
                 </div>
-                
+
                 <div className={showLoadingBar?"hideElement":""}>
                     <div className="movie-list-wrapper">
                         <ul className="movie-list">
-                            {currentPageMovieList && currentPageMovieList.map((movieItem) => 
-                            <MovieItem key={movieItem.id} movieItem={movieItem} removeMovieItemFromState={this.removeMovieItemFromState}
-                            addToFavorite={addToFavorite} removeFromFavorite={removeFromFavorite} addToBlock={addToBlock} />)}
+                            {currentPageMovieList && currentPageMovieList.map((movieItem) =>
+                                <MovieItem key={movieItem.id} movieItem={movieItem} removeMovieItemFromState={this.removeMovieItemFromState}
+                                           addToFavorite={addToFavorite} removeFromFavorite={removeFromFavorite} addToBlock={addToBlock} />)}
                         </ul>
                     </div>
                 </div>
@@ -241,11 +202,6 @@ class MovieTab extends React.Component {
 }
 
 export default connect(
-<<<<<<< HEAD
-    state => ({movieList: state.movieListReducer}), 
-    {loadNextPageFromDB, addToFavorite, removeFromFavorite, addToBlock}
-=======
-    state => ({movieList: state.movieListReducer, currentPage: state.currentPageReducer}), 
+    state => ({movieList: state.movieListReducer, currentPage: state.currentPageReducer}),
     {loadNextPageFromDB, addToFavorite, removeFromFavorite, addToBlock, addCurrentPage, deductCurrentPage}
->>>>>>> develop
 )(MovieTab);

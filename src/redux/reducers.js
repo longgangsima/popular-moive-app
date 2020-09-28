@@ -4,33 +4,15 @@ import {LOAD_NEXT_PAGE_FROM_DB, ADD_TO_FAVORITE, REMOVE_FROM_FAVORITE, ADD_TO_BL
 // movieListReducer
 function movieListReducer(state=[], action) {
     switch(action.type) {
-        case LOAD_NEXT_PAGE_FROM_DB: 
+        case LOAD_NEXT_PAGE_FROM_DB:
             return [...state, action.data];
-        case ADD_TO_FAVORITE: 
+        case ADD_TO_FAVORITE:
             let addToFavoriteState = [...state];
             addToFavoriteState[action.data.page - 1][action.data.index].isFavorite = true;
-<<<<<<< HEAD
-            addToFavoriteState[action.data.page - 1][action.data.index].isBlock = false;
-=======
->>>>>>> develop
             return addToFavoriteState;
         case REMOVE_FROM_FAVORITE:
             let removeFromFavoriteState = [...state];
             removeFromFavoriteState[action.data.page - 1][action.data.index].isFavorite = false;
-<<<<<<< HEAD
-
-            return removeFromFavoriteState;
-        case ADD_TO_BLOCK:
-            let addToBlockState = [...state];
-            addToBlockState[action.data.page - 1][action.data.index].isBlock = true;
-            return addToBlockState;
-        case REMOVE_FROM_BLOCK:
-            let removeFromBlockState = [...state];
-            removeFromBlockState[action.data.page - 1][action.data.index].isBlock = false;
-
-            return removeFromBlockState;
-        default: 
-=======
             return removeFromFavoriteState;
         case ADD_TO_BLOCK:
             let addToBlockState = [...state];
@@ -41,7 +23,7 @@ function movieListReducer(state=[], action) {
             let removeFromBlockState = [...state];
             removeFromBlockState[action.data.page - 1][action.data.index].isBlock = false;
             return removeFromBlockState;
-        default: 
+        default:
             return state;
     }
 }
@@ -54,15 +36,10 @@ function currentPageReducer(state=0, action) {
         case DEDUCT_CURRENT_PAGE:
             return state - 1;
         default:
->>>>>>> develop
             return state;
     }
 }
 
 export default combineReducers({
-<<<<<<< HEAD
-    movieListReducer
-=======
     movieListReducer, currentPageReducer,
->>>>>>> develop
 });
