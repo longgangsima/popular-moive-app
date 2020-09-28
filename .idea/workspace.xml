@@ -1,58 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
-  </component>
   <component name="BranchesTreeState">
-    <expand>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </expand>
+    <expand />
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="63825d8f-b905-4408-a085-d263120b4318" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../SILICON_SPECTRA/toDoList/.idea/toDoList.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SILICON_SPECTRA/toDoList/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Screen Shot 2020-09-24 at 10.21.46 PM.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Screen Shot 2020-09-26 at 12.10.02 AM.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Screen Shot 2020-09-26 at 12.10.08 AM.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ajax-test/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ajax-test/.idea/ajax-test.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ajax-test/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ajax-test/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ajax-test/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ajax-test/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ajax-test/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ajax-test/src/Movie.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ajax-test/src/Movie.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../movieList-react.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/block-tab/movie.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../test-three/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../test-three/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../test-three/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../test-three/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../test-three/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../test-three/.idea/test-three.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../test-three/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../test-three/src/Movie.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/movie-item/movie-item.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/movie-item/movie-item.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/actions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/reducers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/block-tab/block-tab.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/block-tab/block-tab.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/movie-tab/movie-tab.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/movie-tab/movie-tab.js" afterDir="false" />
-    </list>
+    <list default="true" id="126d413c-ffc2-4d26-afd2-ba6208fe1be3" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -61,7 +14,6 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="CSS File" />
       </list>
     </option>
@@ -69,22 +21,47 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="width" value="1280" />
+    <option name="height" value="800" />
+  </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/block-movie-item" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/img" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/components/block-movie-item" />
+      <recent name="$PROJECT_DIR$/src/img" />
     </key>
   </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="126d413c-ffc2-4d26-afd2-ba6208fe1be3" name="Default Changelist" comment="" />
+      <created>1601241482306</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1601241482306</updated>
+      <workItem from="1601241484348" duration="3114000" />
+    </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -99,25 +76,21 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1259" height="212" key="GridCell.Tab.0.bottom" timestamp="1601167264103">
+    <state width="629" height="212" key="GridCell.Tab.0.bottom" timestamp="1601251094208">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1259" height="212" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1601167264103" />
-    <state width="1259" height="212" key="GridCell.Tab.0.center" timestamp="1601167264101">
+    <state width="629" height="212" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1601251094208" />
+    <state width="629" height="212" key="GridCell.Tab.0.center" timestamp="1601251094207">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1259" height="212" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1601167264101" />
-    <state width="1259" height="212" key="GridCell.Tab.0.left" timestamp="1601167264101">
+    <state width="629" height="212" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1601251094207" />
+    <state width="629" height="212" key="GridCell.Tab.0.left" timestamp="1601251094206">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1259" height="212" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1601167264101" />
-    <state width="1259" height="212" key="GridCell.Tab.0.right" timestamp="1601167264102">
+    <state width="629" height="212" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1601251094206" />
+    <state width="629" height="212" key="GridCell.Tab.0.right" timestamp="1601251094208">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1259" height="212" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1601167264102" />
-    <state x="764" y="232" width="930" height="592" key="dock-window-1" timestamp="1601237790451">
-      <screen x="0" y="0" width="1280" height="800" />
-    </state>
-    <state x="764" y="232" width="930" height="592" key="dock-window-1/0.0.1280.800@0.0.1280.800" timestamp="1601237790451" />
+    <state width="629" height="212" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1601251094208" />
   </component>
 </project>
