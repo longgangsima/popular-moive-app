@@ -1,0 +1,35 @@
+.block-movie{
+
+    width: 240px;
+
+}
+
+
+.block-movie-image img {
+    width: 100%;
+    vertical-align: bottom;
+}
+
+.block-movie-image{
+    position: relative;
+    transition: background 0.5s ease;
+
+}
+.block-movie:hover .block-movie-image {
+    top: -10px;
+    border: #6c757d solid 2px;
+}
+
+.block-movie-buttons{
+    display: flex;
+}
+
+.block-movie-button-button{
+    bottom: 0;
+    opacity:0;
+}
+
+/*button appear while hover*/
+.block-movie:hover .block-movie-button-button{
+    opacity: 1;
+}

@@ -1,0 +1,14 @@
+.carousal_container {
+    display: flex;
+    justify-content: center;
+}
+
+.my_carousel {
+    width: 100vw;
+    height: 90vh;
+}
+
+.my_carousel_image {
+    width: 100vw;
+    height: 90vh;
+}

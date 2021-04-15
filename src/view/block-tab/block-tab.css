@@ -1,0 +1,44 @@
+
+.block-movie-item {
+    width: 100%;
+    margin: 0 auto;
+    background-color: rgb(255, 253, 246);
+    color: #333;
+}
+.block-movie-header{
+
+    width: 80%;
+    height: 100px;
+    top: 10%;
+    text-align: center;
+    vertical-align: middle;
+    margin: 0 auto;
+    line-height: 90px;
+    background-color: rgb(217, 239, 244);
+}
+
+.block-movie-list{
+    width: 100%;
+}
+
+.block-movies{
+    box-sizing: content-box;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /*grid-template-columns: repeat(4, 25%);*/
+    /*grid-column-gap: 5px;*/
+    /*grid-row-gap: 10px;*/
+    /*grid-gap: 5px;*/
+    width: 80%;
+    margin: 0 auto;
+    align-self: center;
+    justify-self: center;
+    padding:20px 10px 10px 10px; /* this */
+    justify-content: center;
+
+}
+
+.block-movies > .block-movies-detail{
+    margin:5px;
+}
